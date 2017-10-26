@@ -20,6 +20,14 @@
       grid += "<td></td>"
     }
     grid += "</tr>"
-    }
+  };
 
-}
+// create grid and adds class: selected
+    $('#pixel_canvas').html(grid).addClass('selected');
+
+// eventlistener for every click and add selected color
+    $('.selected').on('click',function(event){
+      $(event.target).css('background',color);
+    });
+
+};
