@@ -9,8 +9,8 @@
 // Your code goes here!
 // Define all variable and select color nad size input
    let color = $('#colorPicker').val();
-   let tableheight = $('#input_height').val();
-   let tableWidth = $('input_width').val();
+   let tableHeight = $('#input_height').val();
+   let tableWidth = $('#input_width').val();
    let grid = "";
 
 // Nested loops to create individual boxes
