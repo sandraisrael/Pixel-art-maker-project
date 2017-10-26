@@ -1,4 +1,6 @@
+let colorPicker; 
 
+colorPicker = $('#colorPicker');
 // Select color input
 // Select size input
 
