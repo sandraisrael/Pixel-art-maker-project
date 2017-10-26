@@ -30,4 +30,4 @@
       $(event.target).css('background',color);
     });
 
-};
+});
