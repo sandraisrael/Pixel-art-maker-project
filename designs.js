@@ -5,7 +5,7 @@
 
 // When size is submitted by the user, call makeGrid()
 
- function makeGrid() {
+ $('#actionButton').on('click', function makeGrid() {
 // Your code goes here!
 // Define all variable and select color nad size input
    let color = $('#colorPicker').val();
@@ -15,11 +15,11 @@
 
 // Nested loops to create individual boxes
     for (let i=0; i < tableHeight; i++){
-    grid += "<tr>"
-    for(let m=0; m < tableWidth; m++){
-      grid += "<td></td>"
-    }
-    grid += "</tr>"
+      grid += "<tr>"
+      for(let m=0; m < tableWidth; m++){
+        grid += "<td></td>"
+      }
+      grid += "</tr>"
   };
 
 // create grid and adds class: selected
