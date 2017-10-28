@@ -1,12 +1,11 @@
+  const submitted = $('#sizePicker');
+  submitted.addEventListener("submit", function(event){
+    event.preventDefault();
+    makeGrid();
+  });
 
-// Select color input
+function makeGrid() {
 
-// Select size input
-
-// When size is submitted by the user, call makeGrid()
-
- $('#actionButton').on('click', function makeGrid() {
-// Your code goes here!
 // Define all variable and select color nad size input
    let color = $('#colorPicker').val();
    let tableHeight = $('#input_height').val();
