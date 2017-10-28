@@ -1,31 +1,31 @@
-  const submitted = $('#sizePicker');
-  submitted.on("submit", function(event){
+const submitted = $('#sizePicker');
+submitted.on("submit", function(event) {
     event.preventDefault();
     makeGrid();
-  });
+});
 
-  function makeGrid(){
+function makeGrid() {
 
-// Define all variable and select color nad size input
-   let color = $('#colorPicker').val();
-   let tableHeight = $('#input_height').val();
-   let tableWidth = $('#input_width').val();
-   let grid = "";
+    // Define all variable and select color nad size input
+    let color = $('#colorPicker').val();
+    let tableHeight = $('#input_height').val();
+    let tableWidth = $('#input_width').val();
+    let grid = "";
 
-// Nested loops to create individual boxes
-    for (let i=0; i < tableHeight; i++){
-      grid += "<tr>"
-      for(let m=0; m < tableWidth; m++){
-        grid += "<td></td>"
-      }
-      grid += "</tr>"
+    // Nested loops to create individual boxes
+    for (let i = 0; i < tableHeight; i++) {
+        grid += "<tr>"
+        for (let m = 0; m < tableWidth; m++) {
+            grid += "<td></td>"
+        }
+        grid += "</tr>"
     }
 
-// create grid
+    // create grid
     $('#pixel_canvas').html(grid);
 
-// eventlistener for every click on cell
-    $('td').on('click',function(event){
-      $(event.target).css('background',color);
+    // eventlistener for every click on cell
+    $('td').on('click', function(event) {
+        $(event.target).css('background', color);
     });
-  };
+};
