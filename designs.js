@@ -1,10 +1,10 @@
   const submitted = $('#sizePicker');
-  submitted.addEventListener("submit", function(event){
+  submitted.on("submit", function(event){
     event.preventDefault();
     makeGrid();
   });
 
-function makeGrid() {
+  function makeGrid(){
 
 // Define all variable and select color nad size input
    let color = $('#colorPicker').val();
@@ -19,14 +19,13 @@ function makeGrid() {
         grid += "<td></td>"
       }
       grid += "</tr>"
-  };
+    }
 
-// create grid and adds class: selected
-    $('#pixel_canvas').html(grid).addClass('selected');
+// create grid
+    $('#pixel_canvas').html(grid);
 
-// eventlistener for every click and add selected color
-    $('.selected').on('click',function(event){
+// eventlistener for every click on cell
+    $('td').on('click',function(event){
       $(event.target).css('background',color);
     });
-
-});
+  };
