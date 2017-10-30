@@ -7,7 +7,6 @@ submitted.on("submit", function(event) {
 function makeGrid() {
 
     // Define all variable and select color nad size input
-    let color = $('#colorPicker').val();
     let tableHeight = $('#input_height').val();
     let tableWidth = $('#input_width').val();
     let grid = "";
@@ -26,6 +25,7 @@ function makeGrid() {
 
     // eventlistener for every click on cell
     $('td').on('click', function(event) {
+        let color = $('#colorPicker').val();
         $(event.target).css('background', color);
     });
 };
